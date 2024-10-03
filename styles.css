@@ -1,0 +1,164 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden; 
+    overflow-y: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background: url('logo.jpg') no-repeat;
+    background-size: cover;
+    
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+  
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+}
+
+
+.container {
+    text-align: center;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(6, 202, 236, 0.5), 0 0 50px rgba(136, 6, 206, 0.5);
+    animation: gradientShadow 3s infinite alternate;
+    width: 80%; 
+    max-width: 600px; 
+    background-color: rgba(20, 20, 20, 0.9); 
+    margin-top: 30px; 
+}
+
+@keyframes gradientShadow {
+    0% {
+        box-shadow: 0 0 40px rgba(6, 202, 236, 1), 0 0 80px rgba(6, 202, 236, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 40px rgba(136, 6, 206, 1), 0 0 80px rgba(136, 6, 206, 0.5);
+    }
+}
+
+
+.profile .logo {
+    width: 130px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+
+.profile .name {
+    font-size: 36px;
+    
+    color: #fff;
+    font-family: "Rajdhani", sans-serif;
+}
+
+.profile .description {
+    font-size: 24px;
+    margin: 10px 0 20px;
+    color: #fff;
+    font-family:"Rajdhani", sans-serif ;
+}
+
+
+.links .link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    padding: 10px;
+    padding-left: 30px;
+    background: #23263586;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    font-size: 16px;
+    font-weight: 580;
+    width: 100%;
+    max-width: 500px;
+    height: 64px;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 500;
+    font-size: large;
+    
+}
+
+.links .link-button span {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    
+.links .link-button:hover {
+    background: #cccccca1;
+}
+
+.links .link-button i, 
+.links .link-button img {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 30px;
+    left: 10px;
+    position: absolute;
+   
+}
+
+.links .link-button i {
+    font-size: 24px;
+}
+
+
+.link-button img {
+    
+    padding: 6px;
+    border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+    .profile .name {
+        font-size: 28px;
+    }
+    .links .link-button {
+        font-size: 14px;
+        padding: 8px;
+        height: 50px;
+    }
+    .links .link-button img {
+        width: 40px;
+        height: 40px;
+    }
+}
